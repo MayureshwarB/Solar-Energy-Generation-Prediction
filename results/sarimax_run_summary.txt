@@ -1,0 +1,18 @@
+Solar energy forecast run summary
+
+Workbook: Complete Data 2020 - 2024 (all features).xlsx
+Dates: 2020-04-01 to 2024-03-31 (1461 daily records)
+Missing entries before interpolation: 39; missing target values: 39
+Train cutoff: 2023-12-31
+Test dates: 2024-01-01 to 2024-03-31 (91 daily rows)
+Original code target model: order=(1,1,1), seasonal_order=(1,1,1,365), 11 exogenous features. Exact fit did not finish in 4 minutes here; its expanded state space had 733 states and one likelihood evaluation alone exceeded 120 seconds without simple differencing.
+Computed model is a fast approximation: explicitly difference target and all exogenous features by 1 day and 365 days, then fit SARIMAX order=(1,0,1), seasonal_order=(0,0,0,365). This retains ordinary ARMA terms and annual differencing but omits seasonal AR and MA components. Forecasts inverted to kWh. Therefore these metrics are NOT the exact scores of the original seasonal_order=(1,1,1,365) model.
+Converged: True
+Iterations: 8
+AIC: 30800.824546072683
+BIC: 30869.56109201571
+MAE (kWh): 1233154.506911718
+RMSE (kWh): 1646952.6783223792
+MAPE (%): 8.673254854827446
+R2: 0.38594462550956965
+MAE/RMSE are from prediction on the held-out 2024-01-01 to 2024-03-31 period. MAPE and R² were additionally calculated; the provided code only calculates MAE and RMSE.

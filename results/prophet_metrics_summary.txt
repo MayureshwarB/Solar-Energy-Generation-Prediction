@@ -1,0 +1,33 @@
+Solar Energy Generation Prediction — Prophet reconstruction
+=========================================================
+
+Input workbook: Complete Data 2020 - 2024 (all features).xlsx
+Date coverage: 2020-04-01 to 2024-03-31
+Training: 2020-04-01 to 2023-12-31
+Test: 2024-01-01 to 2024-03-31
+Training observations: 1370
+Test observations available: 91
+Observed test targets scored: 91
+Target values interpolated within training period: 39
+Log transform: log1p(kWh); predictions inverse transformed with expm1
+Seasonality mode: multiplicative; yearly=True; weekly=True; daily=False
+Changpoint prior scale: 0.05; seasonality prior scale: 10.0
+Feature set: report
+External regressors:
+  - ALLSKY_SFC_SW_DWN
+  - CLRSKY_SFC_SW_DWN
+  - T2M
+  - RH2M
+  - WS2M
+
+Metrics on originally observed test targets only:
+MAE: 1142102.3389 kWh (1.142102 MU)
+RMSE: 1472508.2261 kWh (1.472508 MU)
+MAPE: 7.5732%
+R2: 0.509136
+
+Interpretation and caveats:
+- Metrics were recomputed from this reconstructed run; original code/scores were unavailable.
+- Metrics are evaluated against observed test targets only; imputed test targets are excluded.
+- Test-period weather/capacity regressors are taken from the supplied historical data. This is a retrospective conditional evaluation, not a live future-weather forecast.
+- MAE/RMSE depend on the target units; do not call R2 an accuracy percentage.

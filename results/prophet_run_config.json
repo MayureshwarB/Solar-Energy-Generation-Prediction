@@ -1,0 +1,33 @@
+{
+  "input_file": "Complete Data 2020 - 2024 (all features).xlsx",
+  "data_start": "2020-04-01",
+  "data_end": "2024-03-31",
+  "train_start": "2020-04-01",
+  "train_end": "2023-12-31",
+  "test_start": "2024-01-01",
+  "test_end": "2024-03-31",
+  "feature_set": "report",
+  "feature_columns": [
+    "ALLSKY_SFC_SW_DWN",
+    "CLRSKY_SFC_SW_DWN",
+    "T2M",
+    "RH2M",
+    "WS2M"
+  ],
+  "target_transform": "log1p(kWh)",
+  "seasonality_mode": "multiplicative",
+  "yearly_seasonality": true,
+  "weekly_seasonality": true,
+  "daily_seasonality": false,
+  "changepoint_prior_scale": 0.05,
+  "seasonality_prior_scale": 10.0,
+  "metrics": {
+    "n_scored_test_observations": 91,
+    "MAE_kWh": 1142102.3389075948,
+    "MAE_MU": 1.1421023389075948,
+    "RMSE_kWh": 1472508.2260692928,
+    "RMSE_MU": 1.4725082260692928,
+    "MAPE_percent": 7.5732120980063335,
+    "R2": 0.5091364833177326
+  }
+}

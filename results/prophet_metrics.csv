@@ -1,0 +1,7 @@
+Metric,Value,Unit,Interpretation
+MAE,1142102.3389075948,kWh,Mean absolute error
+MAE,1.1421023389075948,MU,Mean absolute error
+RMSE,1472508.2260692928,kWh,Root mean squared error
+RMSE,1.4725082260692928,MU,Root mean squared error
+MAPE,7.5732120980063335,%,Mean absolute percentage error; only defined for non-zero actuals
+R2,0.5091364833177326,score,Coefficient of determination; may be negative
